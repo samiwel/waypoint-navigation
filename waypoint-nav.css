@@ -1,0 +1,86 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.sidebar {
+  margin: 1em;
+}
+
+/*
+Waypoint nav styles
+*/
+.waypoint-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.waypoint:before {
+  content: "oo"; /* Adds spacing for waypoints.*/
+  display: inline-block;
+  color: white;
+  pointer-events: none;
+  min-width: 1em;
+  margin-right: .5em;
+  border-radius: 2em;
+  border: .4em solid #ccc;
+  z-index: 2;
+}
+
+.waypoint:not(:last-child):after {
+  content: "";
+  clear: both;
+  display: block;
+  border-left: .5em solid #ccc;
+  margin-left: .7em;
+  height: 4em;
+  z-index: 0;
+}
+
+.complete:before {
+  border: .4em solid #95d56e;
+}
+
+.complete:not(:last-child):after {
+    border-left: .5em solid #95d56e;
+}
+
+.error:before {
+  border: .4em solid #bf3e32;
+}
+
+.error:not(:last-child):after {
+    border-left: .5em solid #bf3e32;
+}
+
+.error a {
+  color: #bf3e32;
+}
+
+.current:before {
+  border: .4em solid #4268be;
+}
+
+.current:not(:last-child):after {
+    border-left: .5em solid #4268be;
+}
+
+.current a {
+  color: #4268be;
+}
+
+.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
